@@ -3,239 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZenSport - Perlengkapan Olahraga Terbaik</title>
+    <title>Profil Eksekutif Sukses - [Nama Pria]</title>
+    <!-- Memuat Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Memuat Font Awesome (Untuk Ikon) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- CSS Kustom untuk Tema Korporat -->
+    <style>
+        :root {
+            --corporate-blue: #0F4C81; /* Biru Korporat Tua */
+            --accent-gold: #FFD700; /* Aksen Emas/Kuning */
+            --light-bg: #F8F9FA;
+            --dark-text: #333333;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark-text);
+            background-color: white;
+        }
+
+        /* Gaya Navbar Kustom */
+        .navbar-custom {
+            background-color: var(--corporate-blue);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+            transition: color 0.3s;
+        }
+        .navbar-brand:hover, .nav-link:hover {
+            color: var(--accent-gold) !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-color: var(--light-bg);
+            padding: 80px 0;
+            border-radius: 0 0 50px 50px; /* Sudut melengkung di bawah */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        .profile-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Gaya Judul dan Teks Utama */
+        .main-heading {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--corporate-blue);
+        }
+        .sub-heading {
+            color: var(--accent-gold);
+            font-weight: 500;
+        }
+
+        /* Bagian Visi & Misi */
+        .vision-section {
+            background-color: white;
+            padding: 60px 0;
+        }
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background-color: var(--corporate-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Bagian Perusahaan/Pencapaian */
+        .company-section {
+            background-color: var(--corporate-blue);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .stat-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .stat-box:hover {
+            background-color: rgba(255, 215, 0, 0.2); /* Aksen emas saat hover */
+            transform: translateY(-5px);
+        }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent-gold);
+        }
+
+        /* Tombol Aksi */
+        .btn-primary-custom {
+            background-color: var(--corporate-blue);
+            border-color: var(--corporate-blue);
+            padding: 10px 30px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+        }
+        .btn-primary-custom:hover {
+            background-color: #0B3A64; /* Sedikit lebih gelap */
+            border-color: #0B3A64;
+            transform: scale(1.02);
+        }
+        .btn-outline-custom {
+            color: var(--corporate-blue);
+            border-color: var(--corporate-blue);
+            padding: 10px 30px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-outline-custom:hover {
+            background-color: var(--corporate-blue);
+            color: white;
+        }
+
+        /* Footer */
+        .footer-custom {
+            background-color: #212529;
+            color: white;
+            padding: 30px 0;
+            border-radius: 50px 50px 0 0; /* Sudut melengkung di atas */
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand fw-bold fs-3 text-white" href="#"><i class="fas fa-bolt me-2"></i>ZenSport</a>
+    <!-- 1. Navbar (Header) -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#">
+                <i class="fas fa-chart-line me-2"></i> [Nama Pria]
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="#">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Sepatu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Bola</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Pakaian</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Promo</a>
-                    </li>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#visi">Visi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#perusahaan">Pencapaian</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
                 </ul>
-                <div class="d-flex align-items-center">
-                    <a href="#" class="btn btn-outline-light me-2"><i class="fas fa-search"></i></a>
-                    <a href="#" class="btn btn-outline-light position-relative">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
-                    </a>
-                </div>
             </div>
         </div>
     </nav>
 
-    <section class="hero-section text-white text-center d-flex align-items-center">
+    <!-- 2. Hero Section (Presentasi Utama) -->
+    <section id="hero" class="hero-section">
         <div class="container">
-            <h1 class="display-2 fw-bolder mb-3 animate-text">ZENSPORT: RAIH POTENSI TERBAIKMU.</h1>
-            <p class="lead mb-4 animate-text-delay">Dapatkan perlengkapan terbaik untuk setiap petualangan olahraga Anda.</p>
-            <a href="#" class="btn btn-warning btn-lg fw-bold shadow-lg animate-button">BELANJA SEKARANG <i class="fas fa-arrow-right ms-2"></i></a>
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <p class="sub-heading text-uppercase">CEO & Pendiri Future Corp</p>
+                    <h1 class="main-heading mb-3">
+                        Membangun Masa Depan Melalui Inovasi dan Kepemimpinan.
+                    </h1>
+                    <p class="lead text-muted mb-4">
+                        [Nama Pria] adalah pemimpin visioner yang telah mengubah lanskap industri [Sebutkan Industri] selama lebih dari 15 tahun. Dedikasinya terhadap keunggulan telah mendorong perusahaannya mencapai tonggak sejarah global.
+                    </p>
+                    <a href="#kontak" class="btn btn-primary-custom me-3">Hubungi Langsung</a>
+                    <a href="#perusahaan" class="btn btn-outline-custom">Lihat Pencapaian</a>
+                </div>
+                <div class="col-lg-5">
+                    <!-- Gambar Pria Sukses -->
+                    <img 
+                        src="https://placehold.co/500x400/0F4C81/FFFFFF?text=FOTO+EKSEKUTIF" 
+                        class="profile-img" 
+                        alt="Foto Profil Eksekutif Sukses"
+                        onerror="this.onerror=null;this.src='https://placehold.co/500x400/0F4C81/FFFFFF?text=FOTO+EKSEKUTIF';"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Visi, Misi, & Nilai (About Us) -->
+    <section id="visi" class="vision-section text-center">
+        <div class="container">
+            <h2 class="main-heading mb-2">Visi & Nilai Inti</h2>
+            <p class="lead text-muted mb-5">Prinsip yang memandu setiap keputusan dan strategi perusahaan.</p>
+            <div class="row">
+                <!-- Nilai 1: Inovasi -->
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex flex-column align-items-center p-4 rounded shadow-sm h-100">
+                        <div class="icon-circle"><i class="fas fa-lightbulb"></i></div>
+                        <h4 class="fw-bold text-corporate-blue">Inovasi Berkelanjutan</h4>
+                        <p>Selalu mencari solusi baru dan mendobrak batas-batas industri yang ada.</p>
+                    </div>
+                </div>
+                <!-- Nilai 2: Integritas -->
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex flex-column align-items-center p-4 rounded shadow-sm h-100">
+                        <div class="icon-circle"><i class="fas fa-handshake"></i></div>
+                        <h4 class="fw-bold text-corporate-blue">Integritas Mutlak</h4>
+                        <p>Mempertahankan standar etika tertinggi dalam setiap transaksi dan hubungan bisnis.</p>
+                    </div>
+                </div>
+                <!-- Nilai 3: Dampak Global -->
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex flex-column align-items-center p-4 rounded shadow-sm h-100">
+                        <div class="icon-circle"><i class="fas fa-globe"></i></div>
+                        <h4 class="fw-bold text-corporate-blue">Dampak Global</h4>
+                        <p>Menciptakan nilai yang tidak hanya bermanfaat bagi pemegang saham, tetapi juga masyarakat luas.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
-    <section class="about-us-section container my-5 py-4">
-        <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="display-5 fw-bolder mb-3 text-primary-custom">Mengapa Memilih ZenSport?</h2>
-                <p class="lead text-muted">Kami bukan hanya toko, kami adalah **mitra** dalam perjalanan olahraga Anda.</p>
-                <p>ZenSport didirikan dengan satu tujuan: menyediakan perlengkapan olahraga **asli**, **berkualitas tinggi**, dan **terkini** bagi para atlet dan penggemar kebugaran. Kami percaya bahwa performa terbaik dimulai dari *gear* yang tepat.</p>
-                
-                <div class="mt-4">
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-check-circle text-primary-custom me-2"></i> **Produk 100% Original**</li>
-                        <li class="mb-2"><i class="fas fa-shipping-fast text-primary-custom me-2"></i> **Pengiriman Cepat & Aman**</li>
-                        <li class="mb-2"><i class="fas fa-handshake text-primary-custom me-2"></i> **Layanan Pelanggan Responsif**</li>
-                    </ul>
-                </div>
-                <a href="#" class="btn btn-outline-primary mt-3">Pelajari Lebih Lanjut <i class="fas fa-angle-right ms-2"></i></a>
-            </div>
-            <div class="col-lg-6">
-                <img src="https://via.placeholder.com/600x400?text=Kualitas+ZenSport" class="img-fluid rounded shadow-lg" alt="Tim ZenSport">
-            </div>
-        </div>
-    </section>
-    <hr class="my-5"> <section class="container my-5 py-4">
-        <h2 class="text-center mb-5 text-primary-custom fw-bold">Kategori Populer ZenSport</h2>
-        <div class="row text-center">
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm category-card">
-                    <div class="card-body">
-                        <i class="fas fa-running fa-4x mb-3 text-secondary-custom"></i>
-                        <h5 class="card-title fw-bold">Sepatu Lari & Futsal</h5>
-                        <p class="card-text text-muted">Akselerasi tanpa batas.</p>
-                        <a href="#" class="btn btn-sm btn-outline-primary">Lihat Koleksi</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm category-card">
-                    <div class="card-body">
-                        <i class="fas fa-futbol fa-4x mb-3 text-secondary-custom"></i>
-                        <h5 class="card-title fw-bold">Bola Premium</h5>
-                        <p class="card-text text-muted">Kontrol dan akurasi tinggi.</p>
-                        <a href="#" class="btn btn-sm btn-outline-primary">Lihat Koleksi</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm category-card">
-                    <div class="card-body">
-                        <i class="fas fa-tshirt fa-4x mb-3 text-secondary-custom"></i>
-                        <h5 class="card-title fw-bold">Pakaian Olahraga</h5>
-                        <p class="card-text text-muted">Bahan *breathable* & nyaman.</p>
-                        <a href="#" class="btn btn-sm btn-outline-primary">Lihat Koleksi</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-light-blue py-5">
+    <!-- 4. Perusahaan & Pencapaian (Company/Stats) -->
+    <section id="perusahaan" class="company-section">
         <div class="container">
-            <h2 class="text-center mb-5 text-dark fw-bold">Produk Pilihan Terbaru ZenSport</h2>
-            <div class="row row-cols-1 row-cols-md-4 g-4">
-                <div class="col">
-                    <div class="card h-100 product-card shadow-lg">
-                        <img src="https://via.placeholder.com/400x300?text=Sepatu+Lari+Pro" class="card-img-top" alt="Sepatu Lari Pro">
-                        <div class="card-body text-center">
-                            <h5 class="card-title fw-bold text-primary-custom">Sepatu Lari 'Aero'</h5>
-                            <p class="card-text text-muted">Teknologi bantalan terbaru.</p>
-                            <span class="fs-4 fw-bolder text-danger">Rp 999.000</span>
-                        </div>
-                        <div class="card-footer bg-white border-0 text-center">
-                            <a href="#" class="btn btn-primary fw-bold"><i class="fas fa-shopping-bag me-2"></i>Beli</a>
-                        </div>
+            <h2 class="display-5 fw-bolder mb-2 text-white">Future Corp</h2>
+            <p class="lead text-white-50 mb-5">Tonggak Sejarah dan Metrik Kunci di bawah kepemimpinan [Nama Pria]</p>
+            <div class="row">
+                <!-- Stat 1: Pendapatan -->
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <div class="stat-number">500+</div>
+                        <p class="text-uppercase fw-bold text-white-50">Karyawan Global</p>
                     </div>
                 </div>
-
-                <div class="col">
-                    <div class="card h-100 product-card shadow-lg">
-                        <img src="https://via.placeholder.com/400x300?text=Bola+Sepak+Match" class="card-img-top" alt="Bola Sepak Match">
-                        <div class="card-body text-center">
-                            <h5 class="card-title fw-bold text-primary-custom">Bola Sepak 'Striker'</h5>
-                            <p class="card-text text-muted">Standar pertandingan resmi.</p>
-                            <span class="fs-4 fw-bolder text-danger">Rp 350.000</span>
-                        </div>
-                        <div class="card-footer bg-white border-0 text-center">
-                            <a href="#" class="btn btn-primary fw-bold"><i class="fas fa-shopping-bag me-2"></i>Beli</a>
-                        </div>
+                <!-- Stat 2: Proyek -->
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <div class="stat-number">15+</div>
+                        <p class="text-uppercase fw-bold text-white-50">Tahun Pengalaman</p>
                     </div>
                 </div>
-
-                <div class="col">
-                    <div class="card h-100 product-card shadow-lg">
-                        <img src="https://via.placeholder.com/400x300?text=Jersey+Training" class="card-img-top" alt="Jersey Training">
-                        <div class="card-body text-center">
-                            <h5 class="card-title fw-bold text-primary-custom">Jersey Training</h5>
-                            <p class="card-text text-muted">Cepat kering, anti-bau.</p>
-                            <span class="fs-4 fw-bolder text-danger">Rp 185.000</span>
-                        </div>
-                        <div class="card-footer bg-white border-0 text-center">
-                            <a href="#" class="btn btn-primary fw-bold"><i class="fas fa-shopping-bag me-2"></i>Beli</a>
-                        </div>
+                <!-- Stat 3: Penghargaan -->
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <div class="stat-number">30</div>
+                        <p class="text-uppercase fw-bold text-white-50">Penghargaan Industri</p>
                     </div>
                 </div>
-
-                <div class="col">
-                    <div class="card h-100 product-card shadow-lg">
-                        <img src="https://via.placeholder.com/400x300?text=Sepatu+Futsal+Agile" class="card-img-top" alt="Sepatu Futsal Agile">
-                        <div class="card-body text-center">
-                            <h5 class="card-title fw-bold text-primary-custom">Futsal 'Agile Pro'</h5>
-                            <p class="card-text text-muted">Traksi superior di lapangan indoor.</p>
-                            <span class="fs-4 fw-bolder text-danger">Rp 520.000</span>
-                        </div>
-                        <div class="card-footer bg-white border-0 text-center">
-                            <a href="#" class="btn btn-primary fw-bold"><i class="fas fa-shopping-bag me-2"></i>Beli</a>
-                        </div>
+                <!-- Stat 4: Klien -->
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <div class="stat-number">98%</div>
+                        <p class="text-uppercase fw-bold text-white-50">Tingkat Kepuasan Klien</p>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-5">
-                <a href="#" class="btn btn-outline-dark btn-lg">LIHAT SEMUA PRODUK <i class="fas fa-angle-double-right ms-2"></i></a>
+            
+            <div class="mt-4">
+                <!-- Placeholder untuk Gambar Perusahaan / Logo Klien -->
+                <img 
+                    src="https://placehold.co/1200x200/FFFFFF/0F4C81?text=LOGO+PERUSAHAAN+DAN+GAMBAR+KANTOR+MODERN" 
+                    class="img-fluid rounded shadow-lg" 
+                    alt="Gambar Kantor Perusahaan"
+                    onerror="this.onerror=null;this.src='https://placehold.co/1200x200/FFFFFF/0F4C81?text=LOGO+PERUSAHAAN+DAN+GAMBAR+KANTOR+MODERN';"
+                >
             </div>
         </div>
     </section>
 
-    <footer class="bg-dark text-white pt-5 pb-4">
-        <div class="container text-center text-md-start">
-            <div class="row text-center text-md-start">
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-primary-custom">ZenSport</h5>
-                    <p>Toko perlengkapan olahraga online terpercaya. Kami menyediakan produk asli dan berkualitas untuk mendukung semangat olahraga Anda.</p>
-                </div>
-
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-primary-custom">Produk</h5>
-                    <p><a href="#" class="text-white" style="text-decoration: none;">Sepatu</a></p>
-                    <p><a href="#" class="text-white" style="text-decoration: none;">Bola</a></p>
-                    <p><a href="#" class="text-white" style="text-decoration: none;">Pakaian</a></p>
-                    <p><a href="#" class="text-white" style="text-decoration: none;">Aksesoris</a></p>
-                </div>
-
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-primary-custom">Tautan Cepat</h5>
-                    <p><a href="#" class="text-white" style="text-decoration: none;">Akun Saya</a></p>
-                    <p><a href="#" class="text-white" style="text-decoration: none;">Keranjang</a></p>
-                    <p><a href="#" class="text-white" style="text-decoration: none;">Lacak Pesanan</a></p>
-                    <p><a href="#" class="text-white" style="text-decoration: none;">Bantuan</a></p>
-                </div>
-
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-primary-custom">Kontak</h5>
-                    <p><i class="fas fa-home me-3"></i> Jakarta, Indonesia</p>
-                    <p><i class="fas fa-envelope me-3"></i> info@zensport.com</p>
-                    <p><i class="fas fa-phone me-3"></i> +62 812 3456 7890</p>
-                </div>
-            </div>
-
-            <hr class="mb-4">
-
-            <div class="row align-items-center">
-                <div class="col-md-7 col-lg-8">
-                    <p class="text-center text-md-start">© 2025 Copyright:
-                        <a href="#" style="text-decoration: none;"><strong class="text-primary-custom">ZenSport</strong></a>
-                    </p>
-                </div>
-                <div class="col-md-5 col-lg-4">
-                    <div class="text-center text-md-end">
-                        <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white fs-4"><i class="fab fa-facebook"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white fs-4"><i class="fab fa-twitter"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white fs-4"><i class="fab fa-instagram"></i></a>
-                            </li>
+    <!-- 5. Kontak (Call to Action) -->
+    <section id="kontak" class="vision-section text-center">
+        <div class="container">
+            <h2 class="main-heading mb-2">Tertarik Berkolaborasi?</h2>
+            <p class="lead text-muted mb-4">Jika Anda memiliki peluang bisnis, kemitraan strategis, atau undangan berbicara, silakan hubungi kami.</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="p-4 border rounded shadow-lg">
+                        <ul class="list-unstyled text-start fs-5">
+                            <li class="mb-3"><i class="fas fa-envelope text-corporate-blue me-3"></i> email@zeinhandsome.com</li>
+                            <li class="mb-3"><i class="fas fa-phone-alt text-corporate-blue me-3"></i> +62 877 5395 6477</li>
+                            <li class="mb-3"><i class="fas fa-map-marker-alt text-corporate-blue me-3"></i> Garut, Indonesia - Global HQ</li>
                         </ul>
+                        <a href="mailto:email@futurecorp.com" class="btn btn-primary-custom w-100 mt-3">Kirim Pesan Sekarang</a>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer class="footer-custom mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2025 Zein Handsome. | Dibuat dengan visi dan keunggulan.</p>
         </div>
     </footer>
 
-
+    <!-- Memuat Bootstrap JS dan dependensi -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
